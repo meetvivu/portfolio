@@ -299,6 +299,11 @@ button:focus{
 	height: 625px;
 	margin: 40px 20px 40% 20px;
 }
+.me-img div{
+	background-image: url(../image/my-5.jpg);
+	width: 100%;
+	height: 100%;
+}
 .me-img-2{
 	position: absolute;
 	bottom: 10%;
