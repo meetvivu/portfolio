@@ -1,176 +1,431 @@
 body{
-	
-	
-}
-ul{
-	margin: 0;
-	padding: 0;
-}
-li{
-	list-style: none;
+	font-family: 'Josefin Sans', sans-serif !important;
 }
 a{
 	text-decoration: none !important;
 }
-.fa-times{
+ul{
+	list-style: none;
+	margin: 0;
+}
+html{
+	scroll-behavior: smooth;
+	cursor: crosshair;
+}
+.header{
+	padding: 20px 20px !important;
+	position: absolute !important;
+	top: 0;
+	z-index: 9;
+	right: 0;
+	left: 0;
+}
+.header.fixed{
+	position: fixed !important;
+	top: 0px;
+	left: 0;
+	right: 0;
+	animation: fixedd 1s 1 alternate;
+	z-index: 9;
+	opacity: 1;
+	background-color: #fff;
+	box-shadow: -3px 4px 14px 0px #ececec;
+}
+@keyframes fixedd{
+	from{
+		transform: translateY(-40px);
+	}
+}
+.modal-dismiss-btn{
+	font-size: 70px;
 	color: #fff;
+	margin-right: 30px;
 	position: absolute;
-    top: 0%;
-    left: 0%;
-    font-size: 35px !important;
-    background: #2196F3;
-    width: 100px;
-    border-bottom-right-radius: 100%;
-    padding-left: 26px;
-    line-height: 80px !important;
-    cursor: pointer;
-    height: 100px;
+	bottom: -20px;
+	left: -20px;
 }
-.home-section{
-	padding: 20em 0;
-	background-image: url(../image/fullscreendark.jpg);
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-	height: 100vh;	
+.modal-header{
+	border-bottom: none !important;
+	padding: 0 !important;
 }
-.home-text h5{
+button:focus{
+	outline: none !important;
+}
+.nav-button{
+	transition: all 0.5s ease 0s;
+	cursor: crosshair;
+}
+.nav-button .first-line{
+	width: 35px;
+}
+.nav-button:hover .first-line{
+	width: 25px;
+}
+.nav-button .second-line{
+	width: 20px;
+}
+.nav-button:hover .second-line{
+	width: 40px;
+	background-color: red;
+}
+.nav-button .third-line{
+	width: 25px;
+}
+.nav-button:hover .third-line{
+	width: 20px;
+}
+.nav-button .forth-line{
+	width: 40px;
+}
+.nav-button:hover .forth-line{
+	width: 30px;	
+	background-color: red;
+}
+.nav-button .first-line , .nav-button .second-line , .nav-button .third-line , .nav-button .forth-line {
+	height: 2px;
+	margin: 3px;
+	background-color: #000;
+	transition: all 0.5s ease 0s;
+}
+.nav li a{
 	color: #fff;
-	font-size: 19px;
+	font-size: 26px;
+	padding: 3rem 0;
+	display: block;	
+	transition: all 0.5s ease 0s;
 }
-.home-text h1{	
-	color: #fff;
-	font-size: calc(1.5vw + 1rem);
-	margin: 19px 0 10px;
+.nav li a:hover{
+	background-color: rgba(255,255,255,.4);
 }
-.home-text p{
-	font-size: calc(0.225vw + .625rem);
-	color: #eeee;
-	margin: 11px 0 23px;
-	line-height: 2;
-}
-.home-btn a{
-	display: block;
+.nav li:hover a{
+	font-size: 50px;
 	color: #000;
-	border-radius: 40px;
-	padding: 15px 30px;
-	background-color: #2bebff;
-	margin: 20px 20px 10px 0px;
+	background-color: rgba(255,255,255,1);
 }
-
-
-.stickey-menu{
-	position: fixed;
-	z-index: 999999999;
-	top: 20%;
-	right: 7%;
-	background-color: #333;
-	padding: 16px 20px;
-	border-radius: 40px;
+.nav-menu{
+	height: calc(1vw + 0.825rem);
 }
-.nav-btn i{
-	cursor: pointer;
-	color: #fff;
-	font-size:20px;
-	margin: 25px 0px;
+.modal{
+	background-color: rgba(0,0,0,.5);
 }
-.w3-sidebar{
-	width: 100%;
-	background-color: #222 !important;
-	animation: animateleft 0.8s !important;
+.modal-backdrop.show{
+	opacity: 1.5 !important;
 }
-.stickey-menu .fa-bars{
-	color: #fff;
-	font-size: 25px;
-	cursor: pointer;
+#menu{
+	margin-top: 40px;
 }
+/*=============================================================================================
+======================================== HEADER CSS END =======================================
+==============================================================================================*/
 
 
-.by{
-	width: 100% !important;
-	display: block !important;
-	z-index: 1 !important;
-}
-.w3-sidebar{
-	display: none;
-	width: 0;
-}
-
-
-
-
-.heading-section h2{
-	margin-top: 70px;
-	color: #fff;
-	font-size: calc(1vw + 0.825rem);
+/*=============================================================================================
+======================================== HEADER-2 CSS START ===================================
+==============================================================================================*/
+.navbar-2{
+	background-color: #fff;
 	display: block;
+	width: 135px;
+	padding: 0;
+	border: 2px dashed #0e27fb;
+	z-index: 9;
 }
-.heading-section span{
-	color: #2196F3;
-	font-size: calc(1vw + 0.825rem);
+.navbar-2 li a{
+	color: #000;
+	font-size: 18px;
+	padding: 0 0px;
+	margin: 25px 5px;
+	display: inline-block;
+	text-shadow: 1px 4px 0px rgba(0,0,0,0.2);
 }
-.about-text li {
+.navbar-2 li:hover{
+	background-color: #000;
+}
+.navbar-2 li:hover a{
 	color: #fff;
-	margin: 30px 0px;
-    font-size: 17px;
-    position: relative;
 }
-.about-text li:before{
+
+
+
+
+.sticky-menu{
+	position: fixed;
+	top: 30%;
+	left: 1%;
+	z-index: 99;
+	transition: all 0.5s ease 0s;
+}
+.sticky-menu-he{
+	background-color: #000;
+}
+.sticky-menu i{
+	color: #fff;
+	font-size: 30px;
+	padding: 10px;
+	animation: cog 2s infinite;
+}
+@keyframes cog{
+	to{
+		transform: rotate(360deg);
+	}
+	form{
+		transform: rotate(0deg);
+	}
+}
+
+
+
+.social-icon{
+	background-color: #fff;
+	display: block;
+	width: 50px;
+	margin: 0;
+	padding: 0;
+	top: 30%;
+	right: 3%;
+	position: fixed;
+	z-index: 99;
+	box-shadow: 0px 0px 3px 0px #f3f3f3;
+}
+.social-icon li a{
+	color: #000;
+	display: block;
+	margin: 20px 0;
+}
+.social-icon li a i{
+	font-size: 18px;
+}
+.social-icon li :hover{
+	background-color: #000;
+	color: #ffff;
+}
+/*=============================================================================================
+======================================== HEADER-2 CSS END =====================================
+==============================================================================================*/
+
+
+/*=============================================================================================
+======================================== BANNER CSS START =====================================
+==============================================================================================*/
+.banner-section{
+	/*background-color: #dbe3e9;*/
+	padding: 7em 0 ;
+}
+.my-img img{
+	display: none;
+	visibility: hidden;
+	opacity: 0;
+	max-width: 500px;
+	height: 480px;
+}
+.dancing-section{
+	overflow-y: hidden;
+}
+.dancing-section h1{
+	font-size: calc(11vw + 3rem);
+	color: transparent;	
+	font-family: 'Dancing Script', cursive;
+	transform: rotate(-30deg);
 	position: absolute;
-	content: '';
-	border: 2px solid #2296f3;
-	width: 80px;
-	top: 2em;
+	top: 30%;
+	left: 10%;
+	animation: dancing 0.8s infinite alternate;
+	text-shadow: -4px -2px 0px rgba(0,0,0,0.1);
+	-webkit-text-stroke: 1px rgba(0,0,0,0.2);
 }
-.ex-heading{
-	font-size: 35px;
+.my-text{
+	padding-bottom: 3em;
+}
+.my-text h3{
+	font-size: calc(3vw + 1rem);
+	text-transform: uppercase;
+	color: #2c3e50;
+	font-weight: 900;
+}
+@keyframes dancing{
+	to{
+		margin-top: 25px;
+	}
+	form{
+		margin-bottom: 25px;
+
+	}
+}
+.my-text h5{
+	font-size: calc(1vw + .625rem);
+	text-transform: uppercase;
+	margin-top: 40px;
+	font-weight: 300;
+}
+.my-text a{
+	background-color: #000;
+	margin-top: 40px;
+	font-size: 20px;
+	display: inline-block;
 	color: #fff;
-	margin-bottom: 40px;
+	padding: 20px 40px;
+	border-radius: 40px;
+	transition: all 0.5s ease 0s;	
 }
-.exper-1{
-	border-left: 2px solid #2196F3;
-	padding-left: 40px;
+.my-text i{
+	visibility: hidden;
+	opacity: 0;
+	transform: translateX(-40px);
+	transition: all 0.5s ease 0s;
+}
+.my-text a:hover i{
+	opacity: 1;
+	visibility: visible;
+	transform: translateX(0px);
+}
+.my-text a:hover{
+	color: #000;
+	background-color: transparent;
+}
+/*=============================================================================================
+======================================== BANNER CSS END =======================================
+==============================================================================================*/
+
+
+
+/*=============================================================================================
+======================================== ABOUT CSS START ======================================
+==============================================================================================*/
+.about-me .main-section{
+	border: 2px dashed #000;
+}
+.me-img{
+	max-width: 100%;
+	height: 625px;
+	margin: 40px 20px 40% 20px;
+}
+/*.me-img div{
+	background-image: url(../image/my-5.jpg);
+	width: 100%;
+	height: 100%;
+}*/
+.me-img-2{
+	position: absolute;
+	bottom: 10%;
+	right: -10%;
+	border: 15px solid #fff;
+	max-width: 100%;
+	height: 300px;
+}
+.main-img-section{
 	position: relative;
 }
-.exper-1:before{
+.about-me .about-my-text h2{
+	font-size: 54px;
+	font-family: 'Dancing Script', cursive;
+	margin-bottom: 50px;
+	position: relative;
+}
+.about-me .about-my-text h2:before{
 	position: absolute;
 	content: '';
-	width: 20px;
-	height: 20px;
-	background-color: #222;	
-	border-radius: 50%;
-	border: 2px solid #2196F3;
-	top: 0;
-	left: -2%;
-}	
-.exper-1 i{
-	color: #fff;
-	font-weight: 900;
+	border: 3px dashed #000;
+	width: 150px;
+	height: 80px;
+	top: -17%;
+	left: 20%;
+	transition: all 0.5s ease 0s;
+}
+.about-me .about-my-text h2:hover:before{
+	width: 200px;
+	border: 3px dashed #0e27fb;
+}
+.about-me .about-my-text p{
+	font-size: calc(1vw + 0.825rem);
+	width: 80%;
+	margin-left: 40px;
+}
+.about-me .about-my-text p i{
+	font-size: 40px;
+	margin: 0 10px;
+}
+.about-me .about-my-text span{
+	width: 70%;
+	font-size: 20px;
+	margin: 50px 0;
+	display: inline-block;
+}
+/*===========================================================================================
+======================================== ABOUT CSS END ========================================
+==============================================================================================*/
+
+
+/*=============================================================================================
+======================================== WHAT-SEC CSS START ==================================
+==============================================================================================*/
+
+.what-i-do , .gallery , .experience-section , .Testimonials-section , .contact-section , .about-me{
+	padding: 7em 0;
+}
+.what-heading{
+	margin-bottom: 3em;
+}
+.what-heading h2{
+	font-size: calc(2vw + 1rem);	
+	font-weight: 400;
+	position: relative;
+	text-transform: uppercase;
+}
+.what-heading h2:after{
+	position: absolute;
+	content: '';
+	width: 85px;
+	height: 2px;
+	bottom: -.4em;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+	background: #0e27fb;
+}
+.services i{
+	margin: 20px 0 20px 0;
+	font-size: 30px;
+    transition: all 0.5s ease 0s;
+    background: whitesmoke;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    border-radius: 50%;
+}
+.what-text{
+	margin-left: 30px;
+}
+.what-text h3{
+	color: #000;
+	margin-top: 15px;
+	font-size: 24px;
 	margin-bottom: 10px;
 }
-.exper-1 h4{
-    color: #fff;
-    font-size: 20px;
-    margin-bottom: 20px;
-} 
-.exper-1 p{
-	color: #eee;
-	font-size: 14px;
-	margin-bottom: 0;
-	padding-bottom: 50px;
+.what-text p{
+	color: #333;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 1.8;
+	letter-spacing: 1px;
 }
+.services{
+	transition: all 0.5s ease 0s;
+	text-align: center;
+}
+.services:hover{
+	transform: translateY(-20px);
+}
+.services:hover .what-icon{
+	background-color: transparent;
+}
+/*=============================================================================================
+======================================== WHAT-SEC CSS END =====================================
+==============================================================================================*/
 
 
-
-
-
-
-
-
-
-
-
+/*=============================================================================================
+======================================== WORK CSS START =======================================
+==============================================================================================*/
 .gal-container {
   padding: 12px;
 }
@@ -246,7 +501,18 @@ a{
 }
 
 
+@media (min-width: 768px) {
+  .gal-container .modal-dialog {
+    width: 55%;
+    margin: 50 auto;
+  }
+}
 
+@media (max-width: 768px) {
+  .gal-container .modal-content {
+    height: 250px;
+  }
+}
 
 
 /* Modal */
@@ -313,84 +579,149 @@ a{
 }
 
 
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+/*=============================================================================================
+======================================== WORK CSS END =========================================
+==============================================================================================*/
 
 
-
-
-
-
-
-.heading-section p{
-	color: #fff;
+/*=============================================================================================
+====================================== EXPERIENCE CSS START ===================================
+==============================================================================================*/
+.experience-img{
+	margin-bottom: 30px;
+}
+.experience-text{
+	border: 1px dashed #000;
+	padding:25px 25px;
+	margin-bottom: 30px;
+	height: 240px;
+}
+.experience-text span{
+	color: #4d4d4d;
+	font-size: 16px;
+	margin-bottom: 15px;
 	display: inline-block;
-	font-size: calc(0.525vw + .425rem);
-	position: relative;
 }
-.heading-section p:before{
-	position: absolute;
-	content: '';
-	width: 40px;
-	height: 3px;
-	background-color: #2196F3;
-	top: 50%;
-	left: -8%;
-}
-.heading-section p:after{
-	position: absolute;
-	content: '';
-	width: 40px;
-	height: 3px;
-	background-color: #2196F3;
-	top: 50%;
-	right: -8%;
-}
-.contact-text span{
-	color: #fff;
-	font-size: 18px;
+.experience-text h3{
+	color: rgba(0,0,0,.8);
+	font-size: calc(0.725vw + 0.725rem);
+	margin-bottom: 15px;
 	display: inline-block;
-	margin-bottom: 8px;
+	transition: all 0.5s ease 0s;
+	display: block;
 }
-.contact-text i{
-	color: #2196F3;
-	font-size: 18px;
-	font-weight: 500;
+.experience-text .read-more{
+	color: #4d4d4d;
+	font-size: 16px;
+	border-bottom: 3px solid #ccc;
+	transition: all 0.5s ease 0s;
 }
-.form-text p{
-	color: #fff;
-	font-size:calc(0.425vw + 0.625rem);
-	margin: 20px 0;
+.experience-text:hover h3 ,.experience-text:hover .read-more{
+	color: #0e27fb;
+}
+/*=============================================================================================
+====================================== EXPERIENCE CSS END =====================================
+==============================================================================================*/
+
+
+/*=============================================================================================
+====================================== Testimonialsv CSS START ================================
+==============================================================================================*/
+.Testimonials-section .what-heading p{
+	color: #333;
+	opacity: 0.7;
+	font-size: calc(0.825vw + .525rem);
+	margin: 3em;
+}
+.personimg{
+	width: 150px;
+	height: 150px;
+	padding: 10px;
+	border: 1px dashed #000;
+	margin: 0 auto;	
+}
+.person-text{
+	margin-top: 3rem;	
+}
+.person-text p{
+	font-size: calc(1vw + .825rem);
+	color: #0e27fb;
+	margin-bottom: 40px;
 	display: inline-block;
-	margin: 15px 20px;
 }
-.form-group input , textarea{
+.person-text span{
+	font-size: 16px;
+	color: #4d4d4d;
+	margin-bottom: 20px;
+	display: block;
+}
+/*=============================================================================================
+====================================== Testimonialsv CSS END ==================================
+==============================================================================================*/
+
+
+/*=============================================================================================
+====================================== FORM-SEC CSS START =====================================
+==============================================================================================*/
+.form-section{
+	padding: 4em 0;
+}
+.form-controls{
+	border-bottom: 2px dashed #000;
+	border-top: 0;
+	border-right: 0;
+	border-left: 0;
 	width: 100%;
-	padding: 10px 20px;
-	background-color: #222;	
-	border: 1px solid #ced4da;
-	color: #6b6b6b;
-	border-radius: 50px;
+	font-size: 20px;
+    height: calc(1.5em + .75rem + 2px);
+    transition: all 0.5s ease 0s;
+}
+.form-controls:hover , .form-controls-text:hover{
+	border-bottom: 2px dashed #0e27fb;
+}
+input:focus{
 	outline: none;
 }
-textarea{
-	border-radius: 20px;
+.form-controls-text{
+	width: 100%;
+	font-size: 20px;
+	border-top: 0;
+	border-right: 0;
+	border-left: 0;
+	border-bottom: 2px dashed #000;
+	transition: all 0.5s ease 0s;
 }
-.contact-form-btn{
-	color: #fff;
-	display: inline-block;
-	background-color: #2196F3;
-	padding: 15px 40px;
-	border-radius: 30px;
+.contact-btn button{
+	background-color: transparent;
+	border: none;
+	font-size: 25px;
+	transition: all 0.5s ease 0s;
 }
+.contact-btn button:hover{
+	border: 2px dashed #0e27fb;
+	padding: 15px 40px;	
+}
+textarea:focus{
+	outline: none;
+}
+/*=============================================================================================
+====================================== FORM-SEC CSS END =======================================
+==============================================================================================*/
 
 
-
-
+/*=============================================================================================
+====================================== FOOTER CSS START ss=======================================
+==============================================================================================*/
 .footer-section{
-	position: absolute;
-	top: 10%;
-	right: 0;
-	left: 0;
-	z-index: -9999999;
+	background-color: rgba(0,0,0,1);
+	padding-top: 4em;
+	position: relative;
+	z-index: 9;
 }
 .footer-heading h2 {
 	font-size: 30px;
@@ -398,7 +729,7 @@ textarea{
 	color: #fff;
 }
 .footer-heading h2 span{
-	color: #2196F3;
+	color: #0e27fb;
 }
 .footer-before{
 	padding-top: 2em;
@@ -491,33 +822,81 @@ textarea{
 	color: #fff;
 	padding-top: 10px;
 }
+/*=============================================================================================
+====================================== FOOTER CSS END =========================================
+==============================================================================================*/
 
 
 
-.toggle-menu{
-	background-color: #222;
-	text-align: center;
-	padding: 8em 0;
-	display: none;
+
+
+
+
+
+
+/*=============================================================================================
+====================================== ABOUT PAGR CSS START ===================================
+==============================================================================================*/
+.about-page-section{
+	padding: 7em 0;
 }
-.toggle-menu-in{
-	background-color: #333;
-	text-align: center;
-	padding: 60px 60px;
-	border-radius: 15px;
-
+.about-page-my-img{
+	position: relative;
 }
-.toggle-menu-in i{
-	color: #2196F3;
-	font-size: 35px;
-	margin-bottom: 10px;
-	cursor: pointer; 
+.about-page-my-img:before{
+	position: absolute;
+	border: 7px dashed #0e27fb;
+	width: 500px;
+	height: 675px;
+	content: '';
+	top: 4%;
+	right: 0;
+	left: 13%;
+	bottom: 0;
+	z-index: -1;
 }
-.toggle-menu-in h3{
-	color: #fff;
-	font-size: 28px;
-	cursor: pointer;
+.about-page-sec-text h3{
+	margin-top: 30px;	
+	color: #000;
+	font-size: calc(.825vw + 0.725rem);
+	line-height: 2;
+	font-weight: 500;
+	margin-left: 30px;
 }
+.about-page-sec-text h5{
+	font-weight: 300;
+	font-size: calc(0.725vw + 0.625rem);
+	line-height: 1.5;
+	color: #111;
+	margin-left: 30px;
+}
+.about-page-sec-text a{
+	color: #000;
+	margin-top: 20px;
+	margin-left: 30px;
+	font-size: 24px;
+	display: inline-block;
+	padding: 10px 30px;
+	border-radius: 10px;
+	position: relative;
+}
+.about-page-sec-text a:before{
+	position: absolute;
+	content: '';
+	top: 10%;
+	left: 10%;
+	border: 2px dashed #0e27fb;
+	width: 50px;
+	height: 40px;
+	transition: all 0.5s ease 0s;	
+}
+.about-page-sec-text a:hover:before{
+	color: #000;
+	width: 120px;
+}
+/*=============================================================================================
+====================================== ABOUT PAGR CSS END =====================================
+==============================================================================================*/
 
 
 
@@ -525,43 +904,94 @@ textarea{
 
 
 
-@media only screen and (max-width: 1024px){
-	.toggle-menu{
+
+
+
+
+/*=============================================================================================
+====================================== WORK PAGE CSS START ===================================
+==============================================================================================*/
+
+/*=============================================================================================
+====================================== WORK PAGE CSS START ===================================
+==============================================================================================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=============================================================================================
+====================================== MEDIA QUERY marker-end:  ========================================
+==============================================================================================*/
+@media(min-width: 1151px){
+	.my-img img{
+		height: 580px !important;
+	}
+}
+@media(min-width:1118px){
+	.me-img-2{
+		right: -10% !important;
+	}
+	.about-page-my-img:before{
 		display: block !important;
 	}
-	.home-1{
+}
+@media (min-width: 991px){
+	.work-img img{
+		width: 100%;
+		height: 100%;
+	}
+	.work-img .read-more{
+		padding: 20px 18px;
+		font-size: 10px; 
+	}
+	.work-img:hover .read-more{
+		top: 10%;
+	}
+	.my-img img{
+		display: block;
+		visibility: visible;
+		opacity: 1;
+	}
+	
+}
+@media(min-width: 620px){
+	.nav li a{
+		padding: 3rem 0!important;
+	}
+	.dancing-section h1{
+		left: 20%;
+	}
+}
+@media(min-width: 320px){
+	.nav li a{
+		padding: 7rem;
+	}
+	.me-img-2{
+		right: 0;
+	}
+	.about-page-my-img:before{
 		display: none;
 	}
-	.stickey-menu{
-		display: none;
-	}
-}
-@media only screen and (max-width: 768px){
-  .modal-content {
-    width: 100%;
-  }
-	.toggle-menu{
-		padding: 2em 0;
-	}
-}
-@media (min-width: 768px) {
-  .gal-container .modal-dialog {
-    width: 55%;
-    margin: 50 auto;
-  }
-}
-
-@media (max-width: 768px) {
-  .gal-container .modal-content {
-    height: 250px;
-  }
-  .toggle-menu{
-  	height: 1050px;
-  }
-}
-@media (max-width: 570px){
-	.footer-img{
-		text-align: center;
-		margin: 0 auto;
+	.nav li a{
+		padding: 1rem 0;
 	}
 }
