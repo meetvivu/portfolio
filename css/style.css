@@ -25,16 +25,15 @@ html{
 .loader {
     background-image: url(../image/water-loder.gif);
     background-repeat: no-repeat;
-    /*background-size: px;*/
     background-position: center;
     height: 100vh;
   	width: 100%;
   	margin: 0 auto;
 }
-/*.loadcomplete{
+.loadcomplete{
 	visibility: hidden;
 	opacity: 0;
-}*/
+}
 .header{
 	padding: 20px 20px !important;
 	position: absolute !important;
