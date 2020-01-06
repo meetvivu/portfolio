@@ -12,6 +12,28 @@ html{
 	scroll-behavior: smooth;
 	cursor: crosshair;
 }
+.preloader{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-color: rgba(255,255,255,.8);
+	z-index: 99999;
+	transition: all 0.5s ease 0s;
+}
+.loader {
+    background-image: url(../image/water-loder.gif);
+    background-repeat: no-repeat;
+    background-size: 821px;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+}
+.loadcomplete{
+	visibility: hidden;
+	opacity: 0;
+}
 .header{
 	padding: 20px 20px !important;
 	position: absolute !important;
@@ -257,31 +279,7 @@ button:focus{
 	margin-top: 40px;
 	font-weight: 300;
 }
-.my-text a{
-	background-color: #000;
-	margin-top: 40px;
-	font-size: 20px;
-	display: inline-block;
-	color: #fff;
-	padding: 20px 40px;
-	border-radius: 40px;
-	transition: all 0.5s ease 0s;	
-}
-.my-text i{
-	visibility: hidden;
-	opacity: 0;
-	transform: translateX(-40px);
-	transition: all 0.5s ease 0s;
-}
-.my-text a:hover i{
-	opacity: 1;
-	visibility: visible;
-	transform: translateX(0px);
-}
-.my-text a:hover{
-	color: #000;
-	background-color: transparent;
-}
+
 /*=============================================================================================
 ======================================== BANNER CSS END =======================================
 ==============================================================================================*/
@@ -293,24 +291,21 @@ button:focus{
 ==============================================================================================*/
 .about-me .main-section{
 	border: 2px dashed #000;
+	position: relative;
 }
 .me-img{
 	max-width: 100%;
-	height: 625px;
-	margin: 40px 20px 40% 20px;
-}
-/*.me-img div{
-	background-image: url(../image/my-5.jpg);
-	width: 100%;
 	height: 100%;
-}*/
+	margin: 40px 0px 40% 00px;
+}
 .me-img-2{
 	position: absolute;
-	bottom: 10%;
-	right: -10%;
+	bottom: 0;
+	padding: 0 20px;
+}
+.me-img-2 img{
 	border: 15px solid #fff;
-	max-width: 100%;
-	height: 300px;
+	height: 100%;
 }
 .main-img-section{
 	position: relative;
@@ -734,6 +729,9 @@ textarea:focus{
 .footer-before{
 	padding-top: 2em;
 }
+.footer-img{
+	margin: 0 auto;
+}
 .footer-img:before{
 	position: absolute;
 	content: "";
@@ -788,8 +786,8 @@ textarea:focus{
 	visibility: visible;
 }
 .footer-img{
-	width: 250px;
-	height: 250px;
+	width: 100%;
+	height: 100%;
 	background-color: red;
 }
 .footer-name h2{
@@ -799,6 +797,12 @@ textarea:focus{
 	font-family: 'Mr De Haviland', cursive;
 	margin-bottom: 0;
 	padding: 0.7em 0;
+}
+.footer-name img{
+	width: 250px;
+	height: 100px;
+	margin: 20px 10px;
+	background-repeat: no-repeat;
 }
 .navbar{
 	margin-bottom: 0;
@@ -972,6 +976,9 @@ textarea:focus{
 		visibility: visible;
 		opacity: 1;
 	}
+	.me-img-2{
+		display: block !important;
+	}
 	
 }
 @media(min-width: 620px){
@@ -983,6 +990,9 @@ textarea:focus{
 	}
 }
 @media(min-width: 320px){
+	.me-img-2{
+		display: none;
+	}
 	.nav li a{
 		padding: 7rem;
 	}

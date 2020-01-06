@@ -17,6 +17,10 @@
 <body>
 
 
+		<div class="preloader">
+			<div class="loader">
+			</div>
+		</div>
 
 	<header class="header navbar-expand-lg navbar fixed">
 		<div class="container">
@@ -44,7 +48,6 @@
 						<div class="my-text text-center">
 							<h3>vivek Dhorajiya</h3>
 							<h5>Ui/ux Designer <br> & <br>Front end develpoer</h5>
-							<a href="#what">WHAT I DO&nbsp;&nbsp;<i class="fa fa-long-arrow-right"></i></a>
 						</div>
 					</div>
 					<div class="col-lg-4 my-img ">
@@ -107,7 +110,7 @@
 				<div class="row align-items-center">
 					<div class="col-lg-6 main-img-section">
 						<div class="me-img">
-								<img src="image/vivekimg.jpeg" class="w-100">
+							<img src="image/vivekimg.jpeg" class="w-100">
 						</div>
 						<div class="me-img-2">
 							<img src="image/my-8.jpg" class="w-100">
@@ -471,7 +474,7 @@
 				</div>
 			</div>
 			<div class="col-lg-12 text-center footer-name">
-				<h2>Vivek Dhorajiya</h2>
+				<img src="image/sign-relax.gif" >
 			</div> 
 			<div class="container">
 				<nav class="footer-nav">
@@ -544,10 +547,10 @@
 
 	<!-- Header modal End -->
 
-	<script src="js/popper.min.js"></script>
-	<script src="js/jquery-3.4.1.slim.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.min.js"></script>
+	<!-- <script src="js/jquery-3.4.1.slim.min.js"></script> -->
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 	<script src="js/owl.carousel.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
 
@@ -599,7 +602,14 @@
 
 		});
 	</script>
+	<script type="text/javascript">
 
+		$(window).on('load', function(){
+			setTimeout(function() {
+				$('.preloader').addClass('loadcomplete');
+			},9000)
+		});
+	</script>	
 
 </body>
 </html>
