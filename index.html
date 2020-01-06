@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" type="text/css" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" type="text/css" href="css/aos.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,500,600,700&display=swap" rel="stylesheet">
@@ -17,10 +18,10 @@
 <body>
 
 
-		<div class="preloader">
-			<div class="loader">
-			</div>
+	<div class="preloader">
+		<div class="loader">
 		</div>
+	</div>
 
 	<header class="header navbar-expand-lg navbar fixed">
 		<div class="container">
@@ -101,7 +102,7 @@
 		</li>
 	</ul>
 
-	<section class="about-me" id="about">
+	<section class="about-me" id="about" data-aos="fade-up">
 		<div class="container">
 			<div class="col-lg-12 what-heading text-center">
 				<h2>About Me</h2>
@@ -553,6 +554,7 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/owl.carousel.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/aos.js"></script>
 
 	<script type="text/javascript">
 		$('.owl-carousel').owlCarousel({
@@ -610,6 +612,12 @@
 			},9000)
 		});
 	</script>	
+
+	<script>
+      AOS.init({
+        easing: 'ease-in-out-sine'
+      });
+    </script>
 
 </body>
 </html>
