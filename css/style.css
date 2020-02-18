@@ -172,7 +172,7 @@ button:focus{
 
 .sticky-menu{
 	position: fixed;
-	top: 30%;
+	top: 20%;
 	left: 1%;
 	z-index: 99;
 	transition: all 0.5s ease 0s;
@@ -182,8 +182,8 @@ button:focus{
 }
 .sticky-menu i{
 	color: #fff;
-	font-size: 30px;
-	padding: 10px;
+	font-size: 25px;
+	padding: 5px;
 	animation: cog 2s infinite;
 }
 @keyframes cog{

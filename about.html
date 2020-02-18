@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" type="text/css" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" type="text/css" href="css/aos.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,500,600,700&display=swap" rel="stylesheet">
@@ -17,7 +18,12 @@
 <body>
 
 
-
+	<div class="col-lg-12" style="overflow-x: hidden;">
+		<div class="preloader">
+			<div class="loader">
+			</div>
+		</div>
+	</div>
 	<header class="header navbar-expand-lg navbar fixed">
 		<div class="container">
 			<a href="#" class="navbar-brand logo d-flex"><h3 style="color: #134784;">VI<h3 style="color: #000;">VU</h3></h3></a>
@@ -37,7 +43,7 @@
 		</div>
 	</div>
 
-	<section class="banner-section" id="home">
+	<section class="banner-section" id="home" data-aos="fade-left" data-aos-duration="3000">
 		<div class="container">
 			<div class="col-lg-12">
 				<div class="row align-items-center">
@@ -250,7 +256,7 @@
 				</div>
 			</div>
 			<div class="col-lg-12 text-center footer-name">
-				<h2>Vivek Dhorajiya</h2>
+				<img src="image/sign-relax.gif" >
 			</div> 
 			<div class="container">
 				<nav class="footer-nav">
@@ -277,7 +283,7 @@
 		<div class="container-fluid footer-copyright mt-5">
 			<div class="col-lg-12">
 				<div class="row justify-content-between ">
-					<span>lorem ipsum copyright</span>
+					<span>Vivek Dhorajiya copyright</span>
 					<p>vivekdhorajiyta9@gmail.com</p>
 				</div>
 			</div>
@@ -352,6 +358,7 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/owl.carousel.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/aos.js"></script>
 
 
 	<script type="text/javascript">
@@ -371,6 +378,22 @@
 				else header.removeClass('fixed');
 			})
 		})
+	</script>
+
+	<script type="text/javascript">
+
+		$(window).on('load', function(){
+			setTimeout(function() {
+				$('.preloader').addClass('loadcomplete');
+			},3000)
+		});
+	</script>
+
+
+	<script>
+		AOS.init({
+			easing: 'ease-in-out-sine'
+		});
 	</script>
 
 

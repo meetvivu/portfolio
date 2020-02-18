@@ -10,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
 	<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" type="text/css" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" type="text/css" href="css/aos.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,500,600,700&display=swap" rel="stylesheet">
@@ -17,7 +18,10 @@
 </head>
 <body>
 
-
+	<div class="preloader">
+		<div class="loader">
+		</div>
+	</div>
 
 	<header class="header navbar-expand-lg navbar fixed">
 		<div class="container">
@@ -114,22 +118,22 @@
 					<div class="row">
 						<div class="col-lg-6 mt-5">
 							<div class="form-group">
-								<input type="name" name="name" placeholder="Your Name" class="form-controls">
+								<input type="name" name="name" placeholder="Your Name" class="form-controls" required>
 							</div>
 						</div>
 						<div class="col-lg-6 mt-5">
 							<div class="form-group">
-								<input type="name" name="name" placeholder="Your Email" class="form-controls">
+								<input type="name" name="name" placeholder="Your Email" class="form-controls" required>
 							</div>
 						</div>
 						<div class="col-lg-12 mt-5">
 							<div class="form-group">
-								<input row="5" type="name" name="name" placeholder="Your Subject" class="form-controls">
+								<input row="5" type="name" name="name" placeholder="Your Subject" class="form-controls" required>
 							</div>
 						</div>
 						<div class="col-lg-12 mt-5">
 							<div class="form-group">
-								<textarea class="form-controls-text" placeholder="Message" cols="12" rows="5"></textarea>
+								<textarea class="form-controls-text" placeholder="Message" cols="12" rows="5" required></textarea>
 							</div>
 						</div>
 						<div class="col-lg-12 text-center mt-5"> 
@@ -145,182 +149,200 @@
 
 	<footer class="footer-section">
 		<div class="container">
-		<div class="col-lg-12 footer-heading text-center">
-			<h2>Follow Me O<span>n Instagram</span></h2>
-		</div>
-		<div class="col-lg-12">
-			<div class="row">
-				<div class="col-lg-3 col-md-6 col-sm-6">
-					<div class="footer-before">
-						<div class="footer-img">
-							<img src="image/my-7.jpg" class="w-100">
-						</div>
-						<div class="footer-overlay">
-							<div class="icon-section">
-								<a href="https://www.instagram.com/vamp.m16/" target="_blank">
-									<i class="fa fa-instagram"></i>
-								</a>
+			<div class="col-lg-12 footer-heading text-center">
+				<h2>Follow Me O<span>n Instagram</span></h2>
+			</div>
+			<div class="col-lg-12">
+				<div class="row">
+					<div class="col-lg-3 col-md-6 col-sm-6">
+						<div class="footer-before">
+							<div class="footer-img">
+								<img src="image/my-7.jpg" class="w-100">
 							</div>
-							<div class="like-section">
-								<i class="fa fa-heart">&nbsp;&nbsp;225</i>&nbsp;&nbsp;
-								<i class="fa fa-comment" aria-hidden="true">&nbsp;15</i>&nbsp;&nbsp;
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 col-sm-6">
-					<div class="footer-before">
-						<div class="footer-img">
-							<img src="image/my-7.jpg" class="w-100">
-						</div>
-						<div class="footer-overlay">
-							<div class="icon-section">
-								<a href="https://www.instagram.com/vamp.m16/" target="_blank">
-									<i class="fa fa-instagram"></i>
-								</a>
-							</div>
-							<div class="like-section">
-								<i class="fa fa-heart">&nbsp;&nbsp;225</i>&nbsp;&nbsp;
-								<i class="fa fa-comment" aria-hidden="true">&nbsp;15</i>&nbsp;&nbsp;
+							<div class="footer-overlay">
+								<div class="icon-section">
+									<a href="https://www.instagram.com/vamp.m16/" target="_blank">
+										<i class="fa fa-instagram"></i>
+									</a>
+								</div>
+								<div class="like-section">
+									<i class="fa fa-heart">&nbsp;&nbsp;225</i>&nbsp;&nbsp;
+									<i class="fa fa-comment" aria-hidden="true">&nbsp;15</i>&nbsp;&nbsp;
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 col-sm-6">
-					<div class="footer-before">
-						<div class="footer-img">
-							<img src="image/my-7.jpg" class="w-100">
-						</div>
-						<div class="footer-overlay">
-							<div class="icon-section">
-								<a href="https://www.instagram.com/vamp.m16/" target="_blank">
-									<i class="fa fa-instagram"></i>
-								</a>
+					<div class="col-lg-3 col-md-6 col-sm-6">
+						<div class="footer-before">
+							<div class="footer-img">
+								<img src="image/my-7.jpg" class="w-100">
 							</div>
-							<div class="like-section">
-								<i class="fa fa-heart">&nbsp;&nbsp;225</i>&nbsp;&nbsp;
-								<i class="fa fa-comment" aria-hidden="true">&nbsp;15</i>&nbsp;&nbsp;
+							<div class="footer-overlay">
+								<div class="icon-section">
+									<a href="https://www.instagram.com/vamp.m16/" target="_blank">
+										<i class="fa fa-instagram"></i>
+									</a>
+								</div>
+								<div class="like-section">
+									<i class="fa fa-heart">&nbsp;&nbsp;225</i>&nbsp;&nbsp;
+									<i class="fa fa-comment" aria-hidden="true">&nbsp;15</i>&nbsp;&nbsp;
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 col-sm-6">
-					<div class="footer-before">
-						<div class="footer-img">
-							<img src="image/my-7.jpg" class="w-100">
-						</div>
-						<div class="footer-overlay">
-							<div class="icon-section">
-								<a href="https://www.instagram.com/vamp.m16/" target="_blank">
-									<i class="fa fa-instagram"></i>
-								</a>
+					<div class="col-lg-3 col-md-6 col-sm-6">
+						<div class="footer-before">
+							<div class="footer-img">
+								<img src="image/my-7.jpg" class="w-100">
 							</div>
-							<div class="like-section">
-								<i class="fa fa-heart">&nbsp;&nbsp;225</i>&nbsp;&nbsp;
-								<i class="fa fa-comment" aria-hidden="true">&nbsp;15</i>&nbsp;&nbsp;
+							<div class="footer-overlay">
+								<div class="icon-section">
+									<a href="https://www.instagram.com/vamp.m16/" target="_blank">
+										<i class="fa fa-instagram"></i>
+									</a>
+								</div>
+								<div class="like-section">
+									<i class="fa fa-heart">&nbsp;&nbsp;225</i>&nbsp;&nbsp;
+									<i class="fa fa-comment" aria-hidden="true">&nbsp;15</i>&nbsp;&nbsp;
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-6">
+						<div class="footer-before">
+							<div class="footer-img">
+								<img src="image/my-7.jpg" class="w-100">
+							</div>
+							<div class="footer-overlay">
+								<div class="icon-section">
+									<a href="https://www.instagram.com/vamp.m16/" target="_blank">
+										<i class="fa fa-instagram"></i>
+									</a>
+								</div>
+								<div class="like-section">
+									<i class="fa fa-heart">&nbsp;&nbsp;225</i>&nbsp;&nbsp;
+									<i class="fa fa-comment" aria-hidden="true">&nbsp;15</i>&nbsp;&nbsp;
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="col-lg-12 text-center footer-name">
-			<h2>Vivek Dhorajiya</h2>
-		</div> 
-		<div class="container">
-			<nav class="footer-nav">
-				<ul class="navbar">
-					<li class="nav-item">
-						<a href="index.html" class="nav-link">HOME</a>
-					</li>
-					<li class="nav-item">
-						<a href="about.html" class="nav-link">ABOUT</a>
-					</li>
-					<li  class="nav-item">
-						<a href="services.html" class="nav-link">WHAT I DO</a>
-					</li>
-					<li class="nav-item">
-						<a href="work.html" class="nav-link">WORK</a>
-					</li>
-					<li class="nav-item">
-						<a href="#catch-me" class="nav-link">CONTACT</a>
-					</li>
-				</ul>
-			</nav>
-		</div>
+			<div class="col-lg-12 text-center footer-name">
+				<img src="image/sign-relax.gif" >
+			</div>
+			<div class="container">
+				<nav class="footer-nav">
+					<ul class="navbar">
+						<li class="nav-item">
+							<a href="index.html" class="nav-link">HOME</a>
+						</li>
+						<li class="nav-item">
+							<a href="about.html" class="nav-link">ABOUT</a>
+						</li>
+						<li  class="nav-item">
+							<a href="services.html" class="nav-link">WHAT I DO</a>
+						</li>
+						<li class="nav-item">
+							<a href="work.html" class="nav-link">WORK</a>
+						</li>
+						<li class="nav-item">
+							<a href="#catch-me" class="nav-link">CONTACT</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
 		</div>
 		<div class="container-fluid footer-copyright mt-5">
-		<div class="col-lg-12">
-			<div class="row justify-content-between ">
-				<span>lorem ipsum copyright</span>
-				<p>vivekdhorajiyta9@gmail.com</p>
+			<div class="col-lg-12">
+				<div class="row justify-content-between ">
+					<span>Vivek Dhorajiya copyright</span>
+					<p>vivekdhorajiyta9@gmail.com</p>
+				</div>
 			</div>
-		</div>
 		</div>
 	</footer>
 
 
 
-<!-- Header modal Start -->
+	<!-- Header modal Start -->
 
-<div class="modal fade p-0" id="menu" role="dialog">
-	<div class="modal-header text-center">
-		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			<span aria-hidden="true" class="modal-dismiss-btn">&times;</span>
-		</button>	
+	<div class="modal fade p-0" id="menu" role="dialog">
+		<div class="modal-header text-center">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true" class="modal-dismiss-btn">&times;</span>
+			</button>	
+		</div>
+		<div class="container-fluid p-0 nav-background">
+			<div class="col-lg-12 p-0">
+				<nav class="nav-menu" id="menu"> 
+					<ul class="nav d-block text-center">
+						<li>
+							<a href="index.html">HOME</a>
+						</li>
+						<li>
+							<a href="about.html">ABOUT</a>
+						</li>
+						<li >
+							<a href="services.html">WHAT I DO</a>
+						</li>
+						<li>
+							<a href="work.html">WORK</a>
+						</li>
+						<li>
+							<a href="contact.html">CONTACT</a>
+						</li>
+					</ul>
+				</nav>
+			</div>	
+			<div class="modal-dialog"></div>
+		</div>
 	</div>
-	<div class="container-fluid p-0 nav-background">
-		<div class="col-lg-12 p-0">
-			<nav class="nav-menu" id="menu"> 
-				<ul class="nav d-block text-center">
-					<li>
-						<a href="index.html">HOME</a>
-					</li>
-					<li>
-						<a href="about.html">ABOUT</a>
-					</li>
-					<li >
-						<a href="services.html">WHAT I DO</a>
-					</li>
-					<li>
-						<a href="work.html">WORK</a>
-					</li>
-					<li>
-						<a href="contact.html">CONTACT</a>
-					</li>
-				</ul>
-			</nav>
-		</div>	
-		<div class="modal-dialog"></div>
-	</div>
-</div>
 
-<!-- Header modal End -->
+	<!-- Header modal End -->
 
 
-<script src="js/popper.min.js"></script>
-<script src="js/jquery-3.4.1.slim.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/wow.min.js"></script>
-<script src="js/owl.carousel.js"></script>
-<script src="js/owl.carousel.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/jquery-3.4.1.slim.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/owl.carousel.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/aos.js"></script>
 
 
-<script type="text/javascript">
-	$(document).ready(function() {
-		$(window).scroll(function() {
-			var header = $('.header'),
-			scroll = $(window).scrollTop();
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(window).scroll(function() {
+				var header = $('.header'),
+				scroll = $(window).scrollTop();
 
-			if (scroll >= 100) header.addClass('fixed');
-			else header.removeClass('fixed');
+				if (scroll >= 100) header.addClass('fixed');
+				else header.removeClass('fixed');
+			})
 		})
-	})
-</script>
+	</script>
 
-<script>
-	new WOW().init();
-</script>
+	<script>
+		new WOW().init();
+	</script>
 
+
+
+	<script type="text/javascript">
+
+		$(window).on('load', function(){
+			setTimeout(function() {
+				$('.preloader').addClass('loadcomplete');
+			},3000)
+		});
+	</script>
+
+
+	<script>
+		AOS.init({
+			easing: 'ease-in-out-sine'
+		});
+	</script>
 </body>
 </html>
