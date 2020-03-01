@@ -12,23 +12,30 @@ html{
 	scroll-behavior: smooth;
 	cursor: crosshair;
 }
+.banner-section{
+	overflow:hidden;
+	max-width:100%;
+}
+.dancing-section {
+	overflow: hidden;
+}
 .preloader{
 	position: fixed;
 	top: 0;
 	bottom: 0;
 	right: 0;
 	left: 0;
-	background-color: rgba(255,255,255,.8);
-	z-index: 99999;
+	background-color: rgba(255,255,255,.9);
+	z-index: 999;
 	transition: all 0.5s ease 0s;
 }
 .loader {
-    background-image: url(../image/water-loder.gif);
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100vh;
-  	width: 100%;
-  	margin: 0 auto;
+	background-image: url(../image/water-loder.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 100vh;
+	width: 100%;
+	margin: 0 auto;
 }
 .loadcomplete{
 	visibility: hidden;
@@ -38,7 +45,7 @@ html{
 	padding: 20px 20px !important;
 	position: absolute !important;
 	top: 0;
-	z-index: 9;
+	z-index: 99;
 	right: 0;
 	left: 0;
 }
@@ -48,7 +55,7 @@ html{
 	left: 0;
 	right: 0;
 	animation: fixedd 1s 1 alternate;
-	z-index: 9;
+	z-index: 99;
 	opacity: 1;
 	background-color: #fff;
 	box-shadow: -3px 4px 14px 0px #ececec;
@@ -59,11 +66,13 @@ html{
 	}
 }
 .modal-dismiss-btn{
-	font-size: 70px;
+	font-size: 50px;
 	color: #fff;
+	font-weight: normal;
+	font-family: airal;
 	margin-right: 30px;
 	position: absolute;
-	bottom: -20px;
+	bottom: -10px;
 	left: -20px;
 }
 .modal-header{
@@ -88,7 +97,7 @@ button:focus{
 }
 .nav-button:hover .second-line{
 	width: 40px;
-	background-color: red;
+	background-color: #134784;
 }
 .nav-button .third-line{
 	width: 25px;
@@ -101,7 +110,7 @@ button:focus{
 }
 .nav-button:hover .forth-line{
 	width: 30px;	
-	background-color: red;
+	background-color: #134784;
 }
 .nav-button .first-line , .nav-button .second-line , .nav-button .third-line , .nav-button .forth-line {
 	height: 2px;
@@ -129,12 +138,17 @@ button:focus{
 }
 .modal{
 	background-color: rgba(0,0,0,.5);
+	position: relative;
+	z-index: 99999;
 }
 .modal-backdrop.show{
 	opacity: 1.5 !important;
 }
 #menu{
 	margin-top: 40px;
+}
+.none{
+	display: none;
 }
 /*=============================================================================================
 ======================================== HEADER CSS END =======================================
@@ -204,20 +218,21 @@ button:focus{
 	margin: 0;
 	padding: 0;
 	top: 30%;
-	right: 3%;
+	right: 0%;
 	position: fixed;
 	z-index: 99;
-	box-shadow: 0px 0px 3px 0px #f3f3f3;
+	box-shadow: 0px 0px 1px 0px #00000d;
 }
 .social-icon li a{
 	color: #000;
 	display: block;
-	margin: 20px 0;
+	padding: 20px 0;
+	transition: all 0.5s ease 0s;
 }
 .social-icon li a i{
 	font-size: 18px;
 }
-.social-icon li :hover{
+.social-icon li a:hover{
 	background-color: #000;
 	color: #ffff;
 }
@@ -230,8 +245,7 @@ button:focus{
 ======================================== BANNER CSS START =====================================
 ==============================================================================================*/
 .banner-section{
-	/*background-color: #dbe3e9;*/
-	padding: 7em 0 ;
+	padding: 7em 0 0 0;
 }
 .my-img img{
 	display: none;
@@ -244,12 +258,12 @@ button:focus{
 	overflow-y: hidden;
 }
 .dancing-section h1{
-	font-size: calc(11vw + 3rem);
+	font-size: calc(7vw + 3rem);
 	color: transparent;	
 	font-family: 'Dancing Script', cursive;
 	transform: rotate(-30deg);
 	position: absolute;
-	top: 30%;
+	top: 17%;
 	left: 10%;
 	animation: dancing 0.8s infinite alternate;
 	text-shadow: -4px -2px 0px rgba(0,0,0,0.1);
@@ -289,6 +303,10 @@ button:focus{
 /*=============================================================================================
 ======================================== ABOUT CSS START ======================================
 ==============================================================================================*/
+.about-me{
+	background: #e7eef7;
+	padding: 4em 0;
+}
 .about-me .main-section{
 	border: 2px dashed #000;
 	position: relative;
@@ -296,7 +314,10 @@ button:focus{
 .me-img{
 	max-width: 100%;
 	height: 100%;
-	margin: 40px 0px 40% 00px;
+	margin: 0px 0px 40px 00px;
+}
+.main-section{
+	padding:40px 0;
 }
 .me-img-2{
 	position: absolute;
@@ -311,7 +332,7 @@ button:focus{
 	position: relative;
 }
 .about-me .about-my-text h2{
-	font-size: 54px;
+	font-size: 43px;
 	font-family: 'Dancing Script', cursive;
 	margin-bottom: 50px;
 	position: relative;
@@ -319,29 +340,28 @@ button:focus{
 .about-me .about-my-text h2:before{
 	position: absolute;
 	content: '';
-	border: 3px dashed #000;
-	width: 150px;
-	height: 80px;
-	top: -17%;
-	left: 20%;
+	border: 3px dashed #000 ;
+	width: 135px;
+	height: 50px;
+	top: 0%;
+	left: 25%;
 	transition: all 0.5s ease 0s;
 }
 .about-me .about-my-text h2:hover:before{
 	width: 200px;
-	border: 3px dashed #0e27fb;
+	border: 3px dashed #2c3e50;
 }
 .about-me .about-my-text p{
 	font-size: calc(1vw + 0.825rem);
-	width: 80%;
-	margin-left: 40px;
+	width: 100%;
 }
 .about-me .about-my-text p i{
 	font-size: 40px;
 	margin: 0 10px;
 }
 .about-me .about-my-text span{
-	width: 70%;
-	font-size: 20px;
+	width: 100%;
+	font-size: 16px;
 	margin: 50px 0;
 	display: inline-block;
 }
@@ -353,12 +373,14 @@ button:focus{
 /*=============================================================================================
 ======================================== WHAT-SEC CSS START ==================================
 ==============================================================================================*/
-
-.what-i-do , .gallery , .experience-section , .Testimonials-section , .contact-section , .about-me{
+.contact-section {
 	padding: 7em 0;
 }
+.what-i-do{
+	padding:5em 0;
+}
 .what-heading{
-	margin-bottom: 3em;
+	margin-bottom: 2em;
 }
 .what-heading h2{
 	font-size: calc(2vw + 1rem);	
@@ -372,47 +394,47 @@ button:focus{
 	width: 85px;
 	height: 2px;
 	bottom: -.4em;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-	background: #0e27fb;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	background: #2c3e50;
 }
 .services i{
 	margin: 20px 0 20px 0;
 	font-size: 30px;
-    transition: all 0.5s ease 0s;
-    background: whitesmoke;
-    width: 100px;
-    height: 100px;
-    line-height: 100px;
-    border-radius: 50%;
-}
-.what-text{
-	margin-left: 30px;
-}
-.what-text h3{
-	color: #000;
-	margin-top: 15px;
-	font-size: 24px;
-	margin-bottom: 10px;
-}
-.what-text p{
-	color: #333;
-	font-size: 20px;
-	font-weight: 400;
-	line-height: 1.8;
-	letter-spacing: 1px;
-}
-.services{
 	transition: all 0.5s ease 0s;
-	text-align: center;
+	background: #e7eef7;
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	border-radius: 50%;
 }
-.services:hover{
-	transform: translateY(-20px);
-}
-.services:hover .what-icon{
-	background-color: transparent;
-}
+/*.what-text{
+	margin-left: 30px;
+	}*/
+	.what-text h3{
+		color: #000;
+		margin-top: 15px;
+		font-size: 24px;
+		margin-bottom: 10px;
+	}
+	.what-text p{
+		color: #333;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 1.8;
+		letter-spacing: 1px;
+	}
+	.services{
+		transition: all 0.5s ease 0s;
+		text-align: center;
+	}
+	.services:hover{
+		transform: translateY(-20px);
+	}
+	.services:hover .what-icon{
+		background-color: transparent;
+	}
 /*=============================================================================================
 ======================================== WHAT-SEC CSS END =====================================
 ==============================================================================================*/
@@ -421,16 +443,19 @@ button:focus{
 /*=============================================================================================
 ======================================== WORK CSS START =======================================
 ==============================================================================================*/
-.gal-container {
-  padding: 12px;
+.gallery{
+	background: #e7eef7;
+	padding: 5em 0;
 }
-
+.gal-container {
+	padding: 12px;
+}
 .gal-item {
-  overflow: hidden;
-  padding: 3px;
+	overflow: hidden;
+	padding: 3px;
 }
 .gal-item .box {
-  overflow: hidden;	
+	overflow: hidden;	
 }
 .box{
 	position: relative;
@@ -452,8 +477,8 @@ button:focus{
 	opacity: 1;
 }
 .box img {
-  height: 100%;
-  width: 100%;
+	height: 100%;
+	width: 100%;
 }
 .gallery .overlay i{
 	color: #fff;
@@ -472,112 +497,112 @@ button:focus{
 	opacity: 1;
 }
 .gal-item a:focus {
-  outline: none;
+	outline: none;
 }
 
 .gal-item a{
-  cursor: pointer;
+	cursor: pointer;
 }
 
 .modal-open .gal-container .modal {
-  background-color: rgba(0,0,0,0.4);
+	background-color: rgba(0,0,0,0.4);
 }
 
 .modal-open .gal-item .modal-body {
-  padding: 0px;
+	padding: 0px;
 }
 
 .modal-open .gal-item button.close:focus {
-  outline: none;
+	outline: none;
 }
 
 .gal-container {
-  width: 80%;
+	width: 80%;
 }
 
 
 @media (min-width: 768px) {
-  .gal-container .modal-dialog {
-    width: 55%;
-    margin: 50 auto;
-  }
+	.gal-container .modal-dialog {
+		width: 55%;
+		margin: 50 auto;
+	}
 }
 
 @media (max-width: 768px) {
-  .gal-container .modal-content {
-    height: 250px;
-  }
+	.gal-container .modal-content {
+		height: 250px;
+	}
 }
 
 
 /* Modal */
 #myImg {
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: 0.3s;
 }
 
 #myImg:hover {opacity: 0.7;}
 
 
 .modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  padding-top: 100px;
-  left: 0;
-  top: 0;
-  width: 100%; 
-  height: 100%;
-  overflow: auto; 
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.9); 
+	display: none;
+	position: fixed;
+	z-index: 1;
+	padding-top: 100px;
+	left: 0;
+	top: 0;
+	width: 100%; 
+	height: 100%;
+	overflow: auto; 
+	background-color: rgb(0,0,0); 
+	background-color: rgba(0,0,0,0.9); 
 }
 
 .modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
+	margin: auto;
+	display: block;
+	width: 80%;
+	max-width: 700px;
 }
 
 #caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 150px;
+	margin: auto;
+	display: block;
+	width: 80%;
+	max-width: 700px;
+	text-align: center;
+	color: #ccc;
+	padding: 10px 0;
+	height: 150px;
 }
 
 .modal-content, #caption { 
-  animation-name: zoom;
-  animation-duration: 0.6s;
+	animation-name: zoom;
+	animation-duration: 0.6s;
 }
 
 @keyframes zoom {
-  from {transform:scale(0)} 
-  to {transform:scale(1)}
+	from {transform:scale(0)} 
+	to {transform:scale(1)}
 }
 
 .close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #fff !important;
-  font-size: 4.5rem !important;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
+	position: absolute;
+	top: 15px;
+	right: 35px;
+	color: #fff !important;
+	font-size: 4.5rem !important;
+	font-size: 40px;
+	font-weight: bold;
+	transition: 0.3s;
 }
 
 
 @media only screen and (max-width: 700px){
-  .modal-content {
-    width: 100%;
-  }
+	.modal-content {
+		width: 100%;
+	}
 }
 /*=============================================================================================
 ======================================== WORK CSS END =========================================
@@ -587,6 +612,9 @@ button:focus{
 /*=============================================================================================
 ====================================== EXPERIENCE CSS START ===================================
 ==============================================================================================*/
+.experience-section{
+	padding: 3em 0;
+}
 .experience-img{
 	margin-bottom: 30px;
 }
@@ -606,18 +634,21 @@ button:focus{
 	color: rgba(0,0,0,.8);
 	font-size: calc(0.725vw + 0.725rem);
 	margin-bottom: 15px;
-	display: inline-block;
 	transition: all 0.5s ease 0s;
 	display: block;
 }
-.experience-text .read-more{
-	color: #4d4d4d;
-	font-size: 16px;
-	border-bottom: 3px solid #ccc;
+.experience-text a{
+	color: rgba(0,0,0,.8);
 	transition: all 0.5s ease 0s;
+	font-size: 16px;
+	
 }
-.experience-text:hover h3 ,.experience-text:hover .read-more{
-	color: #0e27fb;
+.experience-text a:hover{
+	/*border-bottom: 1px solid #134784;*/
+	left: 100%;
+}
+.experience-text:hover h3 ,.experience-text:hover a{
+	color: #134784;
 }
 /*=============================================================================================
 ====================================== EXPERIENCE CSS END =====================================
@@ -627,6 +658,10 @@ button:focus{
 /*=============================================================================================
 ====================================== Testimonialsv CSS START ================================
 ==============================================================================================*/
+.Testimonials-section{
+	background: #e7eef7;
+	padding: 3em 0;
+}
 .Testimonials-section .what-heading p{
 	color: #333;
 	opacity: 0.7;
@@ -645,7 +680,7 @@ button:focus{
 }
 .person-text p{
 	font-size: calc(1vw + .825rem);
-	color: #0e27fb;
+	color: #2c3e50;
 	margin-bottom: 40px;
 	display: inline-block;
 }
@@ -663,8 +698,8 @@ button:focus{
 /*=============================================================================================
 ====================================== FORM-SEC CSS START =====================================
 ==============================================================================================*/
-.form-section{
-	padding: 4em 0;
+.contact-section{
+	padding: 3em 0;
 }
 .form-controls{
 	border-bottom: 2px dashed #000;
@@ -673,11 +708,11 @@ button:focus{
 	border-left: 0;
 	width: 100%;
 	font-size: 20px;
-    height: calc(1.5em + .75rem + 2px);
-    transition: all 0.5s ease 0s;
+	height: calc(1.5em + .75rem + 2px);
+	transition: all 0.5s ease 0s;
 }
 .form-controls:hover , .form-controls-text:hover{
-	border-bottom: 2px dashed #0e27fb;
+	border-bottom: 2px dashed #2c3e50;
 }
 input:focus{
 	outline: none;
@@ -693,13 +728,14 @@ input:focus{
 }
 .contact-btn button{
 	background-color: transparent;
-	border: none;
-	font-size: 25px;
+	font-size: 22px;
+	padding: 10px 20px; 
+	border: 1px dashed #2c3e50;
 	transition: all 0.5s ease 0s;
 }
 .contact-btn button:hover{
-	border: 2px dashed #0e27fb;
-	padding: 15px 40px;	
+	background: #2c3e50;
+	color: #fff;
 }
 textarea:focus{
 	outline: none;
@@ -727,7 +763,7 @@ textarea:focus{
 	color: #0e27fb;
 }
 .footer-before{
-	padding-top: 2em;
+	padding-top: 1em;
 }
 .footer-img{
 	margin: 0 auto;
@@ -790,19 +826,13 @@ textarea:focus{
 	height: 100%;
 	background-color: red;
 }
-.footer-name h2{
-	font-size: 56px;
-	font-weight: 400;
-	color: #fff;
-	font-family: 'Mr De Haviland', cursive;
-	margin-bottom: 0;
-	padding: 0.7em 0;
-}
 .footer-name img{
 	width: 250px;
 	height: 100px;
 	margin: 20px 10px;
 	background-repeat: no-repeat;
+	background: #fff;
+	border-radius: 3px;
 }
 .navbar{
 	margin-bottom: 0;
@@ -812,20 +842,17 @@ textarea:focus{
 	font-size: 14px;
 	transition: all 0.5s ease 0s;
 }
-.footer-nav ul li a:hover{
-	color: #0e27fb;
-}
-.footer-nav{
-	border: 2px dashed #fff;
-}
 .footer-copyright{
 	border-top: 2px dashed rgba(255,255,255,.4)
 }
 .footer-copyright p , .footer-copyright span{
-	font-size: 16px;
+	font-size: 11px;
 	color: #fff;
-	padding: 20px 0;
-	margin: 0 auto;
+	padding: 7px 0;
+}
+.footer-copyright p a{
+	color: #fff;
+	text-decoration: none;
 }
 /*=============================================================================================
 ====================================== FOOTER CSS END =========================================
@@ -964,6 +991,11 @@ textarea:focus{
 		width: 100%;
 		height: 100%;
 	}
+	.dancing-section h1{
+		font-size: calc(10vw + 3rem);
+		top: 23%;
+		left: 10%;
+	}
 	.work-img .read-more{
 		padding: 20px 18px;
 		font-size: 10px; 
@@ -978,6 +1010,21 @@ textarea:focus{
 	}
 	.me-img-2{
 		display: block !important;
+	}
+}
+@media (min-width: 768px){
+	.footer-copyright p , .footer-copyright span{
+		font-size: 16px;
+		color: #fff;
+		padding: 10px 0;
+	}
+	.about-me .about-my-text p{
+		width: 83%;
+		margin-left: 15px;
+	}
+	.about-me .about-my-text span{
+		width: 70%;
+		font-size: 20px;
 	}
 }
 @media(min-width: 620px){
