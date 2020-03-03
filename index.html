@@ -1,47 +1,63 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>VIVEK | DHORAJIYA</title>
+	<link rel="shortcut icon" type="iamge/png" href="image/logo.png">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" type="text/css" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" type="text/css" href="css/aos.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,500,600,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Mr+De+Haviland&display=swap" rel="stylesheet">
+</head>
 <body>
 
 
-	<div class="preloader">
+	 <div class="preloader">
 		<div class="loader">
 		</div>
 	</div>
 
-	<header class="header navbar-expand-lg navbar fixed">
-		<div class="container align-items-center">
-			<a href="index.php" class="navbar-brand logo d-flex"><h3 style="color: #134784; margin:0;">VI<h3 style="color: #000; margin:0;">DH</h3></h3></a>
-			<div class="nav-button" data-toggle="modal" data-target="#menu">
-				<div class="first-line"></div>
-				<div class="second-line"></div>
-				<div class="third-line"></div>
-				<div class="forth-line"></div>
-			</div>
-		</div>
-	</header>
-
-	<div class="container">
-		<div class="dancing-section">
-			<h1>Designer</h1>
+<header class="header navbar-expand-lg navbar fixed">
+	<div class="container align-items-center">
+		<a href="index.html" class="navbar-brand logo d-flex"><h3 style="color: #134784; margin:0;">VI<h3 style="color: #000; margin:0;">DH</h3></h3></a>
+		<div class="nav-button" data-toggle="modal" data-target="#menu">
+			<div class="first-line"></div>
+			<div class="second-line"></div>
+			<div class="third-line"></div>
+			<div class="forth-line"></div>
 		</div>
 	</div>
+</header>
 
-	<section class="banner-section" id="home">
-		<div class="container">
-			<div class="col-lg-12">
-				<div class="row align-items-center">
-					<div class="col-lg-8">
-						<div class="my-text text-center">
-							<h3>vivek Dhorajiya</h3>
-							<h5>Ui/ux Designer <br> & <br>Front end develpoer</h5>
-						</div>
+<div class="container">
+	<div class="dancing-section">
+		<h1>Designer</h1>
+	</div>
+</div>
+
+<section class="banner-section" id="home">
+	<div class="container">
+		<div class="col-lg-12">
+			<div class="row align-items-center">
+				<div class="col-lg-8">
+					<div class="my-text text-center">
+						<h3>vivek Dhorajiya</h3>
+						<h5>Ui/ux Designer <br> & <br>Front end develpoer</h5>
 					</div>
-					<div class="col-lg-4 my-img ">
-						<img src="image/me.png">
-					</div>
+				</div>
+				<div class="col-lg-4 my-img ">
+					<img src="image/me.png">
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
+</section>
 
 	<!-- <div class="sticky-menu">
 		<div class="sticky-menu-he"> 
@@ -86,7 +102,7 @@
 		</li>
 	</ul>
 
-	<section class="about-me" id="about" >
+	<section class="about-me" id="about" data-aos="fade-up">
 		<div class="container">
 			<div class="col-lg-12 what-heading text-center">
 				<h2>About Me</h2>
@@ -320,54 +336,37 @@
 		</div>
 	</section>
 
-
-	<?php 
-	include('header.php');
-	$con = mysqli_connect("localhost","root","","vivek");
-
-	if(isset($_POST['submit']))
-	{
-		$name = $_POST['name'];
-		$email = $_POST['email'];
-		$subject = $_POST['subject'];
-		$message = $_POST['message'];
-
-		$qu = "insert into crud (`name`,`email`,`subject`,`message`) values ('$name','$email','$subject','$message')";
-		$que = mysqli_query($con,$qu);
-	}
-	?>
-
 	<section class="contact-section" id="catch-me">
 		<div class="container">
 			<div class="col-lg-12 what-heading text-center">
 				<h2>Catch Me</h2>
 			</div>
-			<form method="post" enctype="multipart/form-data">
+			<form>
 				<div class="col-lg-12 form-section">
 					<div class="row">
 						<div class="col-lg-6 mt-5">
 							<div class="form-group">
-								<input type="text" name="name" placeholder="Your Name*" class="form-controls" required>
+								<input type="name" name="name" placeholder="Your Name" class="form-controls" required>
 							</div>
 						</div>
 						<div class="col-lg-6 mt-5">
 							<div class="form-group">
-								<input type="text" name="email" placeholder="Your Email*" class="form-controls" required>
+								<input type="name" name="name" placeholder="Your Email" class="form-controls" required>
 							</div>
 						</div>
 						<div class="col-lg-12 mt-5">
 							<div class="form-group">
-								<input row="5" type="text" name="subject" placeholder="Your Subject*" class="form-controls" required>
+								<input row="5" type="name" name="name" placeholder="Your Subject" class="form-controls" required>
 							</div>
 						</div>
 						<div class="col-lg-12 mt-5">
 							<div class="form-group">
-								<textarea class="form-controls-text" name="message" placeholder="Message*" cols="12" rows="5" required></textarea>
+								<textarea class="form-controls-text" placeholder="Message" cols="12" rows="5" required></textarea>
 							</div>
 						</div>
 						<div class="col-lg-12 text-center mt-5"> 
 							<div class="contact-btn">
-								<button type="submit" onclick="myfunction()" name="submit" value="submit">Submit</button>
+								<button type="submit" value="submit">Submit</button>
 							</div>
 						</div>
 					</div>
@@ -533,4 +532,95 @@
 
 	<!-- Header modal End -->
 
-	<?php include('footer.php'); ?>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-3.4.1.slim.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/owl.carousel.js"></script>
+	<!-- <script src="https://code.jquery.com/jquery-3.3.1.js"></script> -->
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/aos.js"></script>
+
+
+	<script type="text/javascript">
+		$(document).on('click','.none-button',function(){
+			// $(this).addClass('.none').siblings(removeClass('.none-button-1'));
+			// alert("test");
+			 $("#menu").modal("hide");
+		});
+	</script>
+
+	<script>
+		$(document).ready(function(){
+			$("none-button").click(function(){
+				$("none-buttonbutton-1").toggleClass("none");
+				$("#menu").modal("hide");
+			});
+		});
+	</script>
+
+	<script type="text/javascript">
+		$('.owl-carousel').owlCarousel({
+			items:1,
+			autoHeight:true
+		});
+	</script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(window).scroll(function() {
+				var header = $('.header'),
+				scroll = $(window).scrollTop();
+
+				if (scroll >= 100) header.addClass('fixed');
+				else header.removeClass('fixed');
+			})
+		})
+	</script>
+
+	<script>
+		function openLeftMenu() {
+			document.getElementById("leftMenu").style.display = "block";
+		}
+
+		function closeLeftMenu() {
+			document.getElementById("leftMenu").style.display = "none";
+		}
+	</script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			$('.link-gallery').click(function(){
+				var descripcion = $(this).attr('title');
+				$('#caption').html(descripcion);
+				var img = $(this).find('img');
+				var src = img.attr('src')
+				$('#img01').attr('src', src);
+				$('#myModal').css('display','block');
+				$('.modal-backdrop').remove();
+			});
+
+			$('.close').click(function(){
+				$('#myModal').css('display','none');
+			});
+
+		});
+	</script>
+	<script type="text/javascript">
+
+		$(window).on('load', function(){
+			setTimeout(function() {
+				$('.preloader').addClass('loadcomplete');
+			},5000)
+		});
+	</script>	
+
+	<script>
+		AOS.init({
+			easing: 'ease-in-out-sine'
+		});
+	</script>
+
+</body>
+</html>
