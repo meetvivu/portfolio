@@ -947,6 +947,16 @@ textarea:focus{
 /*=============================================================================================
 ====================================== WORK PAGE CSS START ===================================
 ==============================================================================================*/
+.contact-section{
+	background-color: #e7eef7;
+}
+.contact-section input{
+	background-color: transparent;
+}
+.contact-section textarea{
+	background-color: transparent;
+}
+
 
 
 
